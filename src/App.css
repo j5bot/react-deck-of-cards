@@ -1,65 +1,184 @@
-.App {
-  text-align: center;
-
-  /* display: flex;
+.flexible {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.flexible.wrapped {
+  flex-wrap: wrap;
+}
+.flexible.column {
+  flex-direction: column;
+}
+.flexible.column.centered {
+}
+.flexible.row {
   flex-direction: row;
-  align-items: center;
-  justify-content: space-around; */
+}
+.flexible.row.centered {
+  justify-content: space-around;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.centered {
+  text-align: center;
 }
 
-.App-header {
+.wide, h1, h2 {
+  width: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.App {
+  font-family: 'Fjalla One', sans-serif;
+  height: 100vh;
+  background-color: rgb(127, 117, 93);
+}
+
+.App-header > * {
+  flex-basis: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+.deal {
+  flex-basis: 70%
+}
+.switch {
+  flex-basis: 30%;
+}
+
+.Deck, .Cards {
+  flex-basis: 48%;
+}
+.VersionSwitcher {
+  flex-basis: 48%;
+}
+
+.Deck, .Cards, .VersionSwitcher {
+  flex-shrink: 0;
+  display: block;
+  position: relative;
+}
+
+/* .Deck img,
+.Cards img,
+.VersionSwitcher img {
+  box-shadow: 0px 3px 5px 0px rgba(102,102,102,1);
+} */
+
+.Deck img,
+.Cards img {
+  width: 100%;
+  min-width: 180px;
+  max-height: 70vh;
+}
+.VersionSwitcher img {
+  width: 100%;
+  min-width: 120px;
+}
+.Deck img + img {
+  position: absolute;
+  left: 0;
+  top: 5%;
+}
+.Deck img + img + img {
+  top: 10%;
+}
+
+/* .Deck img {
+  flex-basis: calc(100% - 2em);
+  width: 20vw;
+}
+.Deck img + img {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+.Deck img + img + img {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+} */
+
+/* .Cards {
+  z-index: 1000;
+} */
+
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   max-width: 100vw;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.flexible {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.deal, .switch {
+  flex-basis: 50%;
+}
+
+.App-header h2 {
+  flex-basis: 100%;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-.Cards img, .Deck img {
-  /* width: 50% */
+.VersionSwitcher {
+  flex-basis: 40%;
+  flex-grow: 0;
+  flex-wrap: nowrap;
+}
+
+.VersionSwitcher h2 {
+  flex-basis: 100%;
+}
+
+.VersionSwitcher img {
+  flex-basis: 30%;
+  flex-grow: 0;
+  max-width: 18vw;
+  margin: 0 2vw;
 }
 
 .Cards {
   flex-basis: 40%;
+  flex-grow: 0;
   text-align: left;
+  z-index: 2;
+}
+.Cards img {
+  max-height: 60vh;
 }
 
 .Deck {
   flex-basis: 40%;
+  flex-grow: 0;
   position: relative;
-  text-align: right;
-  padding-right: 2.4em;
-  padding-bottom: 2.4em;
+  padding-left: 10vw;
+  padding-bottom: 6vh;
+}
+.Deck img {
+  position: absolute;
+  top: 0vh;
+  right: 6vw;
+  max-height: 60vh;
 }
 .Deck img + img {
   position: absolute;
-  top: 0.8em;
-  left: 0.8em;
+  top: 2vh;
+  right: 4vw;
 }
 .Deck img + img + img {
   position: absolute;
-  top: 1.6em;
-  left: 1.6em;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  top: 4vh;
+  right: 2vw;
+} */

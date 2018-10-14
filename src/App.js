@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import * as deckOfCards from 'deck-of-cards';
 
-import logo from './logo.svg';
 import './App.css';
+// import './English.css';
 
 const importAll = (r) => {
   let images = {};
@@ -13,71 +13,172 @@ const importAll = (r) => {
   return images;
 };
 
-const cardImages = importAll(require.context('../node_modules/svg-cards/png/2x', false, /\.(png|jpe?g|svg)$/));
+const svgCardImages = importAll(require.context('../node_modules/svg-cards/png/2x', false, /\.(png|jpe?g|svg)$/));
+const englishCardImages = importAll(require.context('../resources/cards/English', false, /\.(png|jpe?g|svg)$/));
+const atlasCardImages = importAll(require.context('../resources/cards/Atlas', false, /\.(png|jpe?g|svg)$/));
+
 
 // const cardImageKeys = Object.keys(cardImages);
 const deck = new deckOfCards.DealableDeck();
 deck.shuffle(7);
 
-const getCardImage = (card) => {
-  console.log(`${card.suit.name.toLowerCase().replace(/s$/,'') }_${card.value < 10 ? card.value+'' : card.name === 'Ten' ? '10' : card.name.toLowerCase() }.png`);
-  return cardImages[ `${card.suit.name.toLowerCase().replace(/s$/,'') }_${card.value < 10 ? card.value+'' : card.name === 'Ten' ? '10' : card.name.toLowerCase() }.png` ];
+const getCardImage = (card, version='atlas') => {
+  switch (version) {
+    case 'english':
+      return englishCardImages[
+        `English_pattern_${ card.value > 1 && card.value < 10  ? card.value+'' : card.name === 'Ten' ? '10' : card.lower }_of_${card.suit.lower }.svg`
+      ];
+    case 'atlas':
+      // console.log(`Atlas_deck_{ card.value > 1 && card.value < 10  ? card.value+'' : card.name === 'Ten' ? '10' : card.lower }_of_${card.suit.lower }.svg`);
+      return atlasCardImages[
+        `Atlas_deck_${ card.value > 1 && card.value < 10  ? card.value+'' : card.name === 'Ten' ? '10' : card.lower }_of_${card.suit.lower }.svg`
+      ];
+    default:
+    case 'svg':
+      // console.log(`${card.suit.lower.replace(/s$/,'') }_${card.value < 10 ? card.value+'' : card.name === 'Ten' ? '10' : card.lower }.png`);
+      return svgCardImages[
+        `${card.suit.lower.replace(/s$/,'') }_${card.value < 10 ? card.value+'' : card.name === 'Ten' ? '10' : card.lower }.png`
+      ];
+  }
+};
+
+const getCardBack = ({ version='atlas', cardBack='green_and_dark_red' }) => {
+  switch (version) {
+    case 'english':
+      return englishCardImages[ `English_pattern_back_${ cardBack }.svg` ];
+    case 'atlas':
+      return atlasCardImages[ `Atlas_deck_card_back_${ cardBack }.svg` ]
+    default:
+    case 'svg':
+      return svgCardImages[ `back-${ cardBack }.png` ];
+  }
 };
 
 const getCardName = (card) => {
   return `${card.name} of ${card.suit.name}`;
 };
 
-const Card = ({ cards, index }) => {
+const Card = ({ cards, index, version='english', click }) => {
 
     const card = cards[ index ];
 
-    return (
-      <img alt={ getCardName(card) } src={ getCardImage(card) } />
+    return card && (
+      <img alt={ getCardName(card) } src={ getCardImage(card, version) } onClick={click} />
     );
   };
 
-const Deck = ({ back, deck, index }) => {
-  let showCards = (deck.size() - index - 1) % 4;
+const Deck = ({ back, deck, index, version='english', cardBack='green_and_dark_red' }) => {
+  const cardsLeft = (deck.size() - index - 1);
+  let showCards = cardsLeft > 3 ? 3 : cardsLeft % 4;
 
   const cardStack = [];
   while (showCards--) {
-    cardStack.push(<img className="cardBack" alt="Card Back" src={ cardImages[ `back-${ back }.png` ] } />);
+    cardStack.push(<img key={showCards} className="cardBack" alt="Card Back" src={ getCardBack({ version, cardBack }) } />);
   }
 
   return cardStack;
 }
 
+const VersionSwitcher = ({switcher}) => {
+
+  const cards = [
+    {
+      value: '2',
+      name: 'Two',
+      lower: 'two',
+      suit: {
+        name: 'Clubs',
+        lower: 'clubs'
+      },
+      version: 'english'
+    },
+    {
+      value: '2',
+      name: 'Two',
+      lower: 'two',
+      suit: {
+        name: 'Hearts',
+        lower: 'hearts'
+      },
+      version: 'english'
+    } // ,
+    // {
+    //   value: '10',
+    //   name: 'Queen',
+    //   lower: 'queen',
+    //   suit: {
+    //     name: 'Hearts',
+    //     lower: 'hearts'
+    //   },
+    //   version: 'svg'
+    // }
+  ]
+
+  return cards.map(
+    (card,index) => {
+      return (
+        <div key={index} className="VersionSwitcher flexible row centered">
+          <Card cards={cards} index={index} version={card.version} click={ () => switcher(card.version) }/>
+        </div>
+      );
+    }
+  );
+
+};
+
 class App extends Component {
 
   constructor() {
     super();
-    this.state = { index: 0 };
+    this.state = { index: 0, version: 'english', cardBack: 'green_and_dark_red' };
   }
 
   dealCard = () => {
-    console.log('dealing');
     this.setState({
       index: this.state.index < deck.size() ? this.state.index + 1 : 0
     });
-    console.log(this.state.index);
+  }
+
+  switcher = (version) => {
+    console.log(version);
+    this.setState({
+      version: version
+    });
   }
 
   render() {
 
-    console.log(deck.cardArray);
-
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="App flexible wrapped column centered">
 
-          <div className="Deck" onClick={ this.dealCard }>
-            <Deck className="Deck" back={ 'teal' } deck={ deck } index={ this.state.index } onClick={ this.dealCard } />
-          </div>
+        <h1>React Deck-of-Cards</h1>
 
-          <div className="Cards">
-            <Card cards={ deck.cardArray } index={ this.state.index } />
-          </div>
+        <header className="App-header flexible row centered">
+
+          <section className="deal flexible wrapped row centered">
+            <h2>Deal Cards</h2>
+
+            <div className="Cards">
+              <Card cards={ deck.cardArray }
+                index={ this.state.index }
+                version={ this.state.version } />
+            </div>
+
+            <div className="Deck flexible row centered" onClick={ this.dealCard }>
+              <Deck className="Deck" version="english"
+                cardBack={ this.state.cardBack }
+                deck={ deck }
+                index={ this.state.index }
+                onClick={ this.dealCard }
+                />
+            </div>
+
+          </section>
+
+          <section className="switch flexible wrapped row centered">
+            <h2>Change Card Style</h2>
+            <VersionSwitcher switcher={ this.switcher }/>
+          </section>
 
         </header>
       </div>
