@@ -1,0 +1,44 @@
+{
+  "name": "react-deck-of-cards",
+  "version": "1.0.0",
+  "private": true,
+  "description": "React UI implementation of deck-of-cards",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://j5bot@github.com/j5bot/react-deck-of-cards.git"
+  },
+  "keywords": [
+    "deck",
+    "cards",
+    "react"
+  ],
+  "dependencies": {
+    "ajv": "^6.5.4",
+    "deck-of-cards": "github:j5bot/deck-of-cards#master",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts": "2.0.4",
+    "svg-cards": "^4.0.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "author": "Jonathan 'J5' Cook <jonathan.j5.cook@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/j5bot/react-deck-of-cards/issues"
+  },
+  "homepage": "https://jonathancook.site/react-deck-of-cards"
+}
