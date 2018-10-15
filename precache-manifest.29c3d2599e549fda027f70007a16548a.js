@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/react-deck-of-cards/static/media/English_pattern_6_of_clubs.36ba3600.svg"
   },
   {
-    "revision": "f80e9bde2f93ec4e8b6e",
-    "url": "/react-deck-of-cards/static/css/main.a83148ac.chunk.css"
+    "revision": "5a20d95cf5f35607a82d",
+    "url": "/react-deck-of-cards/static/css/main.47a2c860.chunk.css"
   },
   {
     "revision": "0a251abc52da9a268da7",
@@ -308,8 +308,8 @@ self.__precacheManifest = [
     "url": "/react-deck-of-cards/static/media/English_pattern_2_of_clubs.80a7fd40.svg"
   },
   {
-    "revision": "298686dd237cb331e2be6cf4735935fa",
-    "url": "/react-deck-of-cards/static/media/English_pattern_2_of_diamonds.298686dd.svg"
+    "revision": "b2e3fb33f53d3257404308c5fdc9f4e2",
+    "url": "/react-deck-of-cards/static/media/English_pattern_2_of_diamonds.b2e3fb33.svg"
   },
   {
     "revision": "cfc69afda64bb2b1143d1ead6ff33639",
@@ -368,8 +368,8 @@ self.__precacheManifest = [
     "url": "/react-deck-of-cards/static/media/English_pattern_5_of_spades.b2695f89.svg"
   },
   {
-    "revision": "f80e9bde2f93ec4e8b6e",
-    "url": "/react-deck-of-cards/static/js/main.f80e9bde.chunk.js"
+    "revision": "5a20d95cf5f35607a82d",
+    "url": "/react-deck-of-cards/static/js/main.5a20d95c.chunk.js"
   },
   {
     "revision": "b70e3454a24adea67daa6783051b458d",
@@ -513,15 +513,11 @@ self.__precacheManifest = [
   },
   {
     "revision": "36fadca2bec3ea9e696245cccbd2d924",
-    "url": "/react-deck-of-cards/static/media/Atlas_deck_10_of_diamonds (1).36fadca2.svg"
-  },
-  {
-    "revision": "36fadca2bec3ea9e696245cccbd2d924",
     "url": "/react-deck-of-cards/static/media/Atlas_deck_10_of_diamonds.36fadca2.svg"
   },
   {
-    "revision": "069c4fe9765e084e15b69e19fc7f1b7e",
-    "url": "/react-deck-of-cards/static/media/Atlas_deck_10_of_hearts.069c4fe9.svg"
+    "revision": "5de9a97775b46f2bc7666fd8c03fb237",
+    "url": "/react-deck-of-cards/static/media/Atlas_deck_10_of_hearts.5de9a977.svg"
   },
   {
     "revision": "370adf8c6363e9a7df994ba25d5f967d",
@@ -532,8 +528,8 @@ self.__precacheManifest = [
     "url": "/react-deck-of-cards/static/media/Atlas_deck_2_of_clubs.d03c49dd.svg"
   },
   {
-    "revision": "d5108ee6c09ca6a3e7572df9ff519673",
-    "url": "/react-deck-of-cards/static/media/Atlas_deck_2_of_hearts.d5108ee6.svg"
+    "revision": "5e72b9a8b3ce0d0bc4aa3438fe786e9b",
+    "url": "/react-deck-of-cards/static/media/Atlas_deck_2_of_hearts.5e72b9a8.svg"
   },
   {
     "revision": "57d24c7bbecdc68a91ccad5592983180",
@@ -548,8 +544,8 @@ self.__precacheManifest = [
     "url": "/react-deck-of-cards/static/media/Atlas_deck_3_of_diamonds.48199abd.svg"
   },
   {
-    "revision": "77cfec54f654d632d70c6e1377a994ea",
-    "url": "/react-deck-of-cards/static/media/Atlas_deck_3_of_hearts.77cfec54.svg"
+    "revision": "ae311f4c9c3367cb4163bd8dade8f598",
+    "url": "/react-deck-of-cards/static/media/Atlas_deck_3_of_hearts.ae311f4c.svg"
   },
   {
     "revision": "4f738df9d241aeaffbbb17d80b29a16d",
@@ -564,8 +560,8 @@ self.__precacheManifest = [
     "url": "/react-deck-of-cards/static/media/Atlas_deck_4_of_diamonds.b2e26f39.svg"
   },
   {
-    "revision": "d811c26abf6936bfefb40dd20b09b35b",
-    "url": "/react-deck-of-cards/static/media/Atlas_deck_4_of_hearts.d811c26a.svg"
+    "revision": "8f5b7786931181dfa0957c562c90874a",
+    "url": "/react-deck-of-cards/static/media/Atlas_deck_4_of_hearts.8f5b7786.svg"
   },
   {
     "revision": "2dde93ddce826c61dcfa97dd691f3f8b",
@@ -580,8 +576,8 @@ self.__precacheManifest = [
     "url": "/react-deck-of-cards/static/media/Atlas_deck_5_of_diamonds.ed752e6c.svg"
   },
   {
-    "revision": "f49dda94f9244d79a4490e075cf56b39",
-    "url": "/react-deck-of-cards/static/media/Atlas_deck_5_of_hearts.f49dda94.svg"
+    "revision": "91357e27afa9a665fd0e18092bc3da58",
+    "url": "/react-deck-of-cards/static/media/Atlas_deck_5_of_hearts.91357e27.svg"
   },
   {
     "revision": "e3c51b9e7d43d49797fd72716ef3e883",
@@ -596,8 +592,8 @@ self.__precacheManifest = [
     "url": "/react-deck-of-cards/static/media/Atlas_deck_6_of_diamonds.9be4a4b4.svg"
   },
   {
-    "revision": "1f999dba84dc03585b919ec5a5c7e48e",
-    "url": "/react-deck-of-cards/static/media/Atlas_deck_6_of_hearts.1f999dba.svg"
+    "revision": "2b4b967e0851d039660a696e88552b38",
+    "url": "/react-deck-of-cards/static/media/Atlas_deck_6_of_hearts.2b4b967e.svg"
   },
   {
     "revision": "d4243b3c1b0cb1c30d85575cd15bfc3e",
@@ -612,8 +608,8 @@ self.__precacheManifest = [
     "url": "/react-deck-of-cards/static/media/Atlas_deck_7_of_diamonds.c914e029.svg"
   },
   {
-    "revision": "301f7e5d093380397cfe14b12c33fab0",
-    "url": "/react-deck-of-cards/static/media/Atlas_deck_7_of_hearts.301f7e5d.svg"
+    "revision": "71343a1a7478623295ba08ec969ded02",
+    "url": "/react-deck-of-cards/static/media/Atlas_deck_7_of_hearts.71343a1a.svg"
   },
   {
     "revision": "f2fa6eda75fd983356e048f192cffe64",
@@ -628,8 +624,8 @@ self.__precacheManifest = [
     "url": "/react-deck-of-cards/static/media/Atlas_deck_8_of_diamonds.2137bb6a.svg"
   },
   {
-    "revision": "c684a4a3113d854d18d85be5325250d6",
-    "url": "/react-deck-of-cards/static/media/Atlas_deck_8_of_hearts.c684a4a3.svg"
+    "revision": "3f40fb4e280a05987006a87aa9b42b5d",
+    "url": "/react-deck-of-cards/static/media/Atlas_deck_8_of_hearts.3f40fb4e.svg"
   },
   {
     "revision": "ed66758e3038333c97b3eba33329db6b",
@@ -644,8 +640,8 @@ self.__precacheManifest = [
     "url": "/react-deck-of-cards/static/media/Atlas_deck_9_of_diamonds.efe2f49e.svg"
   },
   {
-    "revision": "0ae8cf951bd1ddea8f8caa6cf7add8d9",
-    "url": "/react-deck-of-cards/static/media/Atlas_deck_9_of_hearts.0ae8cf95.svg"
+    "revision": "d359c2e0bbbbc7f2c0658421804c8567",
+    "url": "/react-deck-of-cards/static/media/Atlas_deck_9_of_hearts.d359c2e0.svg"
   },
   {
     "revision": "7ce8bc9113686398fd7c563681e4faef",
@@ -664,8 +660,8 @@ self.__precacheManifest = [
     "url": "/react-deck-of-cards/static/media/Atlas_deck_ace_of_diamonds_2.26f247ff.svg"
   },
   {
-    "revision": "32421d99cdc03408f85048ecb5da2af0",
-    "url": "/react-deck-of-cards/static/media/Atlas_deck_ace_of_hearts.32421d99.svg"
+    "revision": "9257d8dac92fa55efe027724a7f7aaee",
+    "url": "/react-deck-of-cards/static/media/Atlas_deck_ace_of_hearts.9257d8da.svg"
   },
   {
     "revision": "b4ea2bbaa429a38cabd88edc23d26657",
@@ -688,8 +684,8 @@ self.__precacheManifest = [
     "url": "/react-deck-of-cards/static/media/Atlas_deck_jack_of_diamonds.09015137.svg"
   },
   {
-    "revision": "765359084621ca20d98adea721dc63a8",
-    "url": "/react-deck-of-cards/static/media/Atlas_deck_jack_of_hearts.76535908.svg"
+    "revision": "d1b03431d311792e61efd9a3c68174c2",
+    "url": "/react-deck-of-cards/static/media/Atlas_deck_jack_of_hearts.d1b03431.svg"
   },
   {
     "revision": "d09cd55b050f28e47b87fc16ea8b65eb",
@@ -712,8 +708,8 @@ self.__precacheManifest = [
     "url": "/react-deck-of-cards/static/media/Atlas_deck_king_of_diamonds.0c465a78.svg"
   },
   {
-    "revision": "7a987efdbb579a7f99d715b647c5839a",
-    "url": "/react-deck-of-cards/static/media/Atlas_deck_king_of_hearts.7a987efd.svg"
+    "revision": "3e63a95e9444c8d8b3bc12b37e42e448",
+    "url": "/react-deck-of-cards/static/media/Atlas_deck_king_of_hearts.3e63a95e.svg"
   },
   {
     "revision": "e3f6b12e55cfaea9857f2753451d6222",
@@ -728,15 +724,15 @@ self.__precacheManifest = [
     "url": "/react-deck-of-cards/static/media/Atlas_deck_queen_of_diamonds.c9696727.svg"
   },
   {
-    "revision": "9e2f0c7a3d57784c5c5827f09da0b9c0",
-    "url": "/react-deck-of-cards/static/media/Atlas_deck_queen_of_hearts.9e2f0c7a.svg"
+    "revision": "174c693a366547aad8211826bfb6875b",
+    "url": "/react-deck-of-cards/static/media/Atlas_deck_queen_of_hearts.174c693a.svg"
   },
   {
     "revision": "d19b9f54691c4203970d6c54b10b14fb",
     "url": "/react-deck-of-cards/static/media/Atlas_deck_queen_of_spades.d19b9f54.svg"
   },
   {
-    "revision": "439381ea06081f2136a17c62d0036614",
+    "revision": "1cd038e55747ff7bbed198072cd8d6b7",
     "url": "/react-deck-of-cards/index.html"
   }
 ];
