@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import * as deckOfCards from 'deck-of-cards';
 
 import './App.css';
-// import './English.css';
 
 const importAll = (r) => {
   let images = {};
@@ -18,7 +17,6 @@ const englishCardImages = importAll(require.context('../resources/cards/English'
 const atlasCardImages = importAll(require.context('../resources/cards/Atlas', false, /\.(png|jpe?g|svg)$/));
 
 
-// const cardImageKeys = Object.keys(cardImages);
 const deck = new deckOfCards.DealableDeck();
 deck.shuffle(7);
 
@@ -29,13 +27,11 @@ const getCardImage = (card, version='atlas') => {
         `English_pattern_${ card.value > 1 && card.value < 10  ? card.value+'' : card.name === 'Ten' ? '10' : card.lower }_of_${card.suit.lower }.svg`
       ];
     case 'atlas':
-      // console.log(`Atlas_deck_{ card.value > 1 && card.value < 10  ? card.value+'' : card.name === 'Ten' ? '10' : card.lower }_of_${card.suit.lower }.svg`);
       return atlasCardImages[
         `Atlas_deck_${ card.value > 1 && card.value < 10  ? card.value+'' : card.name === 'Ten' ? '10' : card.lower }_of_${card.suit.lower }.svg`
       ];
     default:
     case 'svg':
-      // console.log(`${card.suit.lower.replace(/s$/,'') }_${card.value < 10 ? card.value+'' : card.name === 'Ten' ? '10' : card.lower }.png`);
       return svgCardImages[
         `${card.suit.lower.replace(/s$/,'') }_${card.value < 10 ? card.value+'' : card.name === 'Ten' ? '10' : card.lower }.png`
       ];
@@ -83,9 +79,9 @@ const VersionSwitcher = ({switcher}) => {
 
   const cards = [
     {
-      value: '2',
-      name: 'Two',
-      lower: 'two',
+      value: '10',
+      name: 'Queen',
+      lower: 'queen',
       suit: {
         name: 'Clubs',
         lower: 'clubs'
@@ -93,31 +89,21 @@ const VersionSwitcher = ({switcher}) => {
       version: 'english'
     },
     {
-      value: '2',
-      name: 'Two',
-      lower: 'two',
+      value: '10',
+      name: 'Queen',
+      lower: 'queen',
       suit: {
         name: 'Hearts',
         lower: 'hearts'
       },
-      version: 'english'
-    } // ,
-    // {
-    //   value: '10',
-    //   name: 'Queen',
-    //   lower: 'queen',
-    //   suit: {
-    //     name: 'Hearts',
-    //     lower: 'hearts'
-    //   },
-    //   version: 'svg'
-    // }
+      version: 'atlas'
+    }
   ]
 
   return cards.map(
     (card,index) => {
       return (
-        <div key={index} className="VersionSwitcher flexible row centered">
+        <div key={index} className="VersionSwitcher flexible row spaced">
           <Card cards={cards} index={index} version={card.version} click={ () => switcher(card.version) }/>
         </div>
       );
@@ -152,10 +138,12 @@ class App extends Component {
       <div className="App flexible wrapped column centered">
 
         <h1>React Deck-of-Cards</h1>
+        <h2>React code implementing <a href="https://go.jonathancook.site/deck-of-cards-repo" target="_blank">deck-of-cards</a></h2>
+        <h3>Also, view <a href="https://go.jonathancook.site/deck-of-cards-demo" target="_blank">deck-of-cards Demo/Tests/Code Coverage</a></h3>
 
         <header className="App-header flexible row centered">
 
-          <section className="deal flexible wrapped row centered">
+          <section className="deal flexible wrapped row spaced">
             <h2>Deal Cards</h2>
 
             <div className="Cards">
@@ -175,7 +163,7 @@ class App extends Component {
 
           </section>
 
-          <section className="switch flexible wrapped row centered">
+          <section className="switch flexible wrapped row spaced">
             <h2>Change Card Style</h2>
             <VersionSwitcher switcher={ this.switcher }/>
           </section>

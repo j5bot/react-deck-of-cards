@@ -13,8 +13,11 @@
 .flexible.row {
   flex-direction: row;
 }
-.flexible.row.centered {
+.flexible.row.spaced {
   justify-content: space-around;
+}
+.flexible.row.centered {
+  justify-content: center;
 }
 
 .centered {
@@ -31,6 +34,20 @@
   font-family: 'Fjalla One', sans-serif;
   height: 100vh;
   background-color: rgb(127, 117, 93);
+  color: rgb(216, 216, 216);
+}
+
+.App a {
+  color: rgb(242, 244, 225);
+  text-decoration: none;
+}
+
+.App h1, .App h2, .App h3 {
+  margin: 0.5em 0;
+}
+
+.App-header {
+  margin: 0.5em 10% 0;
 }
 
 .App-header > * {

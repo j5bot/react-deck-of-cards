@@ -4,11 +4,14 @@
   "private": true,
   "description": "React UI implementation of deck-of-cards",
   "main": "index.js",
+  "homepage": "https://jonathancook.site/react-deck-of-cards",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -40,5 +43,8 @@
   "bugs": {
     "url": "https://github.com/j5bot/react-deck-of-cards/issues"
   },
-  "homepage": "https://jonathancook.site/react-deck-of-cards"
+  "homepage": "https://jonathancook.site/react-deck-of-cards",
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }
